@@ -1,6 +1,7 @@
 module Sidekiq
-  module Failures
+  class Shutdown < StandardError ; end
 
+  module Failures
     class Middleware
       include Sidekiq::Util
       attr_accessor :msg
